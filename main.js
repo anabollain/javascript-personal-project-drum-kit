@@ -7,7 +7,7 @@ function removeTransition(ev) {
 
 function addRemoveClass(element){
     //Add CSS class
-    element.classList.add('js-play');
+    element.classList.toggle('js-play');
     //Select all key elements 
     const keysEl = document.querySelectorAll('.key');
     //Transition end ev for the added CSS class 
