@@ -34,8 +34,15 @@ We can stop a CSS transition and remove a certain class from Javascript, with th
 
 The audio element has many properties and methods, such as currentTime or play().
 
+## Solving a 'glitch'
+
+I noticed that if you hold a key down during a certain amount of time, the CSS class gets added but is never removed, so the style changes permanently. 
+
+To avoid it, I have applied the following solution: using `.toggle()` instead of `.add()` within the `addRemoveClass()` function. 
+
+So instead of `element.classList.add('js-play')`, we will have `element.classList.toggle('js-play')`. 
 
 ## Credits
 
 * [30 Day Vanilla JS Coding Challenge](https://javascript30.com/)
-
+* [Possible solutions for 'glitch'](https://stackoverflow.com/questions/43966150/bug-with-transitionend-event-not-correctly-removing-a-css-class)
